@@ -28,4 +28,5 @@ function currentLine(line){
     return `The line is currently: ${i+1}. ${line[i]},` 
         i++;
   } 
+  return line;
 }
