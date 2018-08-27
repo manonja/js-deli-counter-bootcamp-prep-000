@@ -20,12 +20,20 @@ function nowServing(line){
 }
 
 function currentLine(line){
-  let i = 0;
+  let newArray = [];
+  let newFormat;
+  let numbers;
   if (line.length === 0){
     return `The line is currently empty.`
   }
-  while (i <= line.length){
-    return `The line is currently: ${i+1}. ${line[i]},` 
-        i++;
+  else {
+    for (let i = 0; i < line.length; i++){
+    // return `The line is currently: ${i+1}. ${line[i]},`
+    newFormat = line[i];
+    numbers = i+1;
+    newArray.push(` ${numbers}. ${newFormat}`)
   } 
+   // return `The line is currently: ${numbers}. ${newFormat},`;
+  }
+  return `The line is currently:${newArray}`;
 }
